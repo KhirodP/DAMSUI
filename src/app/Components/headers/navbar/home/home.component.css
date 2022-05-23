@@ -1,0 +1,13 @@
+::ng-deep .highlighted-text{
+    background-color: yellow;
+  }
+
+  ::ng-deep .dataCard{
+    margin: 10px;
+    background-color: #dedede;
+}
+
+::ng-deep .docTitle{
+    display: inline-block;
+    /* flex-wrap: wrap; */
+}

@@ -1,0 +1,348 @@
+<div class="container">
+  <p-toolbar>
+    <div class="updateSection">
+      <button
+        pRipple
+        pButton
+        label="Submit"
+        class="p-button-sm primaryButton"
+        icon="pi pi-check"
+        (click)="onSubmit()"
+      ></button>
+      &nbsp;
+      <button
+        style="float: right"
+        pRipple
+        pButton
+        label="Raise Query"
+        class="p-button-sm p-button-raised primaryButton"
+        icon="pi pi-exclamation-triangle"
+        (click)="raiseQuery()"
+      ></button>
+    </div>
+</p-toolbar>
+
+<div style="margin: 20px 00px">
+    <p-card style="position: relative">
+      <div>
+        <div style="float: right">
+          <i
+            *ngIf="bookmark"
+            (click)="bookmarkSection(section)"
+            class="pi pi-bookmark-fill"
+            style="cursor: pointer"
+          ></i>
+
+          <i
+            *ngIf="!bookmark"
+            (click)="bookmarkSection(section)"
+            class="pi pi-bookmark"
+            style="cursor: pointer"
+          ></i>
+          &nbsp;
+        </div>
+
+        <h3 class="section">{{ section }}:</h3>
+        <p class="secDesc">{{ secDesc }}</p>
+      </div>
+
+      <div style="float: right"></div>
+    </p-card>
+  </div>
+
+  <!-- this is for editing section but currently we are not using it  -->
+
+  <p-dialog
+    [(visible)]="sectionDialog"
+    [style]="{ width: '50%' }"
+    styleClass="p-fluid"
+  >
+    <h3>Update Section</h3>
+    <hr />
+    <ng-template pTemplate="content">
+      <h5>Section:</h5>
+      {{ section }}
+      <h5>Description:</h5>
+      <textarea pInputText value="{{ secDesc }}"></textarea>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+      <button
+        style="margin-top: 5px"
+        pButton
+        pRipple
+        label="Cancel"
+        icon="pi pi-times"
+        class="p-button-text primaryButton"
+      ></button>
+      <button
+        style="margin-top: 5px"
+        pButton
+        pRipple
+        label="Update"
+        icon="pi pi-check"
+        class="p-button-text primaryButton"
+      ></button>
+    </ng-template>
+  </p-dialog>
+
+
+
+  <p-toolbar>
+    <button
+      pButton
+      label="Add Keyword"
+      (click)="addKeyword()"
+      icon="pi pi-plus"
+      class="primaryButton"
+    ></button>
+  </p-toolbar>
+
+  <!-- this is for showing keywords and entities -->
+  <div>
+    <p-tabView>
+      <p-tabPanel header="Keywords">
+        <p-table
+          styleClass="keywordTable"
+          class="css-serial"
+          [value]="keywords"
+          responsiveLayout="scroll"
+        >
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Sr. No</th>
+              <th>Keyword</th>
+              <th>Frequency</th>
+              <th>Boost</th>
+              <th>Action</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-keyword>
+            <tr>
+              <td></td>
+              <td class="keyword" (click)="onClickKeyword(keyword.keyword)">
+                {{ keyword.keyword }}
+              </td>
+              <td>{{ keyword.frequency }}</td>
+              <td></td>
+              <td>
+                <button
+                  pButton
+                  (click)="deleteKeyword('bottom', keyword.id, section)"
+                  icon="pi pi-trash"
+                  class="p-button-sm primaryButton"
+                ></button>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-tabPanel>
+      <p-tabPanel header="Entity">
+        <p-table
+          class="css-serial"
+          [value]="entities"
+          responsiveLayout="scroll"
+        >
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Sr. No</th>
+              <th>Entity</th>
+              <th>Type</th>
+              <th>Action</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-entities>
+            <tr>
+              <td></td>
+              <td class="entity">
+                {{ entities.entity }}
+              </td>
+              <td class="entity">{{ entities.type }}</td>
+              <td>
+                <button
+                  pButton
+                  (click)="deleteEntity('bottom', entities.id)"
+                  icon="pi pi-trash"
+                  class="p-button-sm primaryButton"
+                ></button>
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
+  <p-confirmDialog
+    [style]="{ width: '50vw' }"
+    key="positionDialog"
+    [position]="position"
+    [baseZIndex]="10000"
+    rejectButtonStyleClass="p-button-outlined"
+  ></p-confirmDialog>
+
+
+  <!-- to display success or error msg -->
+  <p-toast></p-toast>
+
+
+
+  <!-- For adding a new keyword -->
+  <p-dialog
+    [(visible)]="addKeywordDialog"
+    [style]="{ width: '30%' }"
+    styleClass="p-fluid"
+  >
+    <h3>Add Keyword</h3>
+    <hr />
+    <ng-template pTemplate="content">
+      <div class="p-field">
+        <label>Keyword:</label>
+        <input
+          pInputText
+          placeholder="Keyword"
+          type="text"
+          [(ngModel)]="newKeyword.keyword"
+        />
+      </div>
+
+      <div class="p-field">
+        <label>Frequency:</label>
+        <input
+          pInputText
+          placeholder="frequency"
+          [(ngModel)]="newKeyword.frequency"
+        />
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+      <button
+        style="margin-top: 5px"
+        pButton
+        pRipple
+        label="Cancel"
+        icon="pi pi-times"
+        class="p-button-text primaryButton"
+        (click)="cancleDialog()"
+      ></button>
+      <button
+        style="margin-top: 5px"
+        pButton
+        pRipple
+        label="Add"
+        icon="pi pi-check"
+        class="p-button-text primaryButton"
+        (click)="addNewKeyword()"
+      ></button>
+    </ng-template>
+  </p-dialog>
+
+
+
+
+  <!-- this is to add reviewer -->
+  <p-dialog
+    [(visible)]="reviewerDialog"
+    [style]="{ width: '30%' }"
+    styleClass="p-fluid"
+  >
+    <ng-template pTemplate="content">
+      <div style="margin-bottom: 50px">
+        <label>Select Reviewer</label>
+        <p-dropdown
+          [options]="reviewers"
+          [virtualScroll]="true"
+          scrollHeight="100px"
+          [(ngModel)]="selectedReviewer"
+          optionLabel="name"
+          placeholder="select reviewer"
+        ></p-dropdown>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <div>
+        <button
+          style="margin-top: 5px"
+          pButton
+          pRipple
+          label="Cancel"
+          icon="pi pi-times"
+          class="p-button-text primaryButton"
+          (click)="cancleDialog()"
+        ></button>
+        <button
+          style="margin-top: 5px"
+          pButton
+          pRipple
+          label="Add"
+          icon="pi pi-check"
+          class="p-button-text primaryButton"
+        ></button>
+      </div>
+    </ng-template>
+  </p-dialog>
+
+
+  <!-- this is to raise query -->
+  <p-dialog
+    [(visible)]="raiseQueryDialog"
+    [style]="{ width: '30%' }"
+    styleClass="p-fluid"
+  >
+    <ng-template pTemplate="content">
+      <div>
+        <label>Add Remark</label>
+        <input pInputText placeholder="Enter Remark" />
+      </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <div>
+        <button
+          style="margin-top: 5px"
+          pButton
+          pRipple
+          label="Cancel"
+          icon="pi pi-times"
+          class="p-button-text primaryButton"
+          (click)="cancleDialog()"
+        ></button>
+        <button
+          style="margin-top: 5px"
+          pButton
+          pRipple
+          label="Post"
+          icon="pi pi-check"
+          class="p-button-text primaryButton"
+        ></button>
+      </div>
+    </ng-template>
+  </p-dialog>
+</div>
+
+
+<!-- this is to keyword mapping -->
+<p-dialog
+  [(visible)]="keywordDialog"
+  [style]="{ width: '30%' }"
+  styleClass="p-fluid"
+>
+  <ng-template pTemplate="content">
+    <div style="margin-bottom: 50px">
+      <h3>{{ keywordData.section }}</h3>
+      <span>{{ keywordData.description }}</span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <div>
+      <button
+        style="margin-top: 5px"
+        pButton
+        pRipple
+        label="Cancel"
+        icon="pi pi-times"
+        class="p-button-text primaryButton"
+        (click)="cancleDialog()"
+      ></button>
+    </div>
+  </ng-template>
+</p-dialog>

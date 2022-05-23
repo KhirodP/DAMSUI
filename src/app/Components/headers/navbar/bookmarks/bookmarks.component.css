@@ -1,0 +1,7 @@
+::ng-deep .innerCard{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(206, 229, 245, 0.933);
+    margin: 1em;
+    border-radius: 0px;
+}

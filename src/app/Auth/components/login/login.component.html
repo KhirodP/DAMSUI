@@ -1,0 +1,44 @@
+<p-card class="container">
+    <div style="text-align: center;color: crimson; margin-bottom: 30px;">
+        <u><h2>Login Here</h2></u>
+    </div>
+<div>
+        
+        <form [formGroup]="project" style="border-radius: 1px solid black;" autocomplete="off" >
+            <p>
+                <span class="p-float-label p-fluid">
+                    <input type="text" id="username" pInputText  formControlName="username"> 
+                    <label for="username">Username</label><br>
+                    <small *ngIf="!project.get('username')?.valid && project.get('username')?.touched">
+                        <span style="color:red;">
+                            Please enter valid username.
+                        </span>
+                    </small>
+                </span>
+            </p>
+            <p>
+                <span class="p-float-label p-fluid">
+                    <input type="password" id="password" pInputText  formControlName="password"> 
+                    <label for="password">Password</label><br>
+                    <small *ngIf="!project.get('password')?.valid && project.get('password')?.touched">
+                        <span style="color:red;">
+                            Please enter valid Password.
+                        </span>
+                    </small>
+                </span>
+            </p>
+    </form>
+    <p-divider></p-divider>
+
+    <!-- <ng-template pTemplate="footer">
+        <button pButton>Save</button>
+    </ng-template> -->
+
+    <div class="p-fluid" style="text-align: center;" >
+        <button [disabled]="!project.valid" pButton label="Login" (click)="onSave()">
+        </button>
+       <u> <a routerLink="#">Forget Password</a></u>
+    </div>
+   
+    </div>
+</p-card>

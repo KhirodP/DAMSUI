@@ -1,0 +1,50 @@
+<div class="title">
+    {{documentData.title}}
+</div>
+<hr>
+<div class="container">
+    
+            <div class="desc">Description:</div>
+            <p>{{documentData.description}}</p>
+        </div>
+
+        <div class="grid">
+            <div class="col-6">
+            <p-table [value]="versions" responsiveLayout="scroll" styleClass="table">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Version</th>
+                        <th>Action</th>
+                        <th>Download</th>
+                        <th></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-version>
+                    <tr>
+                        <td (click)="onClickVesrion(version.version)" style="cursor: pointer;"><a>{{version.version}}</a></td>
+                        <td><p-inputSwitch class="inputSwitch"></p-inputSwitch></td>
+                        <td><i style="cursor: pointer;" class="pi pi-download"></i></td>
+                        <td><button class="primaryButton" pButton label="Approve" icon="pi pi-check"></button></td>
+                        <!-- <td><p-selectButton [options]="stateOptions" [(ngModel)]="version.status" optionLabel="label" optionValue="value"></p-selectButton></td> -->
+                        
+                    </tr>
+                </ng-template>
+            </p-table>
+            </div>
+            <div class="col-6">
+                <p-table class="css-serial" [value]="sections" responsiveLayout="scroll">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Sections</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-section>
+                        <tr>
+                            <td></td>
+                            <td (click)="onClickSection(section.section)" class="section"><a>{{section.section}}</a></td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+        </div>
+    </div>

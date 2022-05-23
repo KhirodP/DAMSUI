@@ -1,0 +1,91 @@
+/* ::ng-deep .uploadButton{
+    float: right;
+} */
+
+
+::ng-deep .innerCard{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(206, 229, 245, 0.933);
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+
+::ng-deep .section{
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+::ng-deep .descriptipn{
+    color: rgb(43, 33, 33);
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.title{
+    color: #3700B3;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.subTitle{
+    color: rgba(8, 0, 0, 0.933);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+@media only screen and (max-width: 490px) {
+    button{
+        margin: 4px;
+    }
+  }
+
+  ::ng-deep .primaryButton{
+    color: white;
+    font-family: Helvetica;
+    font-size: 16px;
+    height: 2em;
+
+}
+
+
+::ng-deep .primaryButton:hover{
+    background-color: #d04a02;
+}
+
+::ng-deep .inputSearch{
+    background-color: white;
+    color: black;
+    font-family: Helvetica;
+    font-size: 16px;
+    height: 2em;
+}
+
+.padding{
+    padding: 10px;
+}
+
+::ng-deep .dataCard{
+    margin: 10px;
+    background-color: #dedede;
+}
+
+::ng-deep .docTitle{
+    display: inline-block;
+    font-family: ITC Charter Regular;
+}
+
+::ng-deep .content{
+    font-family: Helvetica Neue Regular;
+}
+
+
+::ng-deep .upoadToolbar{
+    background-color: white;
+}
+
+  
+  

@@ -1,0 +1,100 @@
+<p-toolbar>
+  <div style="float: right; text-decoration: none">
+    <input
+      class="inputSearch"
+      type="search"
+      pInputText
+      placeholder="Search here..."
+      [(ngModel)]="searchKeyword"
+      (keyup.enter)="search()"
+      styleClass="p-fluid"
+    />
+    &nbsp;
+    <button
+      pRipple
+      pButton
+      class="primaryButton p-button-sm"
+      label="Search"
+      (click)="search()"
+    ></button>
+  </div>
+</p-toolbar>
+
+<div>
+  <p-dialog
+    [(visible)]="uploadDialog"
+    [style]="{ width: '40%' }"
+    styleClass="p-fluid"
+    [modal]="true"
+  >
+    <h3>Upload documents Here</h3>
+    <hr />
+    <ng-template pTemplate="content">
+      <input
+        class="p-inputtext-sm"
+        type="file"
+        multiple="multiple"
+        accept="application/pdf"
+        pInputText
+        id="dos"
+        name="file"
+        required
+        autofocus
+        (change)="selectFile($event)"
+      />
+      &nbsp;
+      <button
+        pButton
+        pRipple
+        label="Upload"
+        icon="pi pi-upload"
+        class="p-button-success"
+        [disabled]="!selectedFiles"
+        (click)="uploadFile()"
+      ></button>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+      <button
+        style="margin-top: 5px"
+        pButton
+        pRipple
+        label="Cancel"
+        icon="pi pi-times"
+        class="p-button-text"
+        (click)="onCancle()"
+      ></button>
+    </ng-template>
+  </p-dialog>
+</div>
+
+<!-- <div>
+  <p-card *ngFor="let data of searchedData">
+    <h3 [innerHTML]="data.sourceAsMap.Name"></h3>
+    <div
+      [innerHTML]="data.sourceAsMap.Content | highlighter: searchKeyword:'full'"
+    ></div>
+  </p-card>
+</div> -->
+
+<div>
+  <p-card *ngFor="let data of searchedData" styleClass="dataCard">
+    <div class="docTitle" style="font-family: ITC Charter Regular;">
+      <span
+        style="font-weight: 700; font-size: x-large"
+        [innerHTML]="data.sourceAsMap.Name | uppercase"
+      ></span>
+      &nbsp;
+      <span
+        >(Uploaded On:{{
+          data.sourceAsMap.timestamp | date: "EEE, dd-MMM yyyy, h:mm:ss aa"
+        }})</span
+      >
+    </div>
+    <hr />
+    <div
+      [innerHTML]="data.sourceAsMap.Content | highlighter: searchKeyword:'full'"
+      style="margin: 10px; font-family: Helvetica Neue Regular;"
+    ></div>
+  </p-card>
+</div>

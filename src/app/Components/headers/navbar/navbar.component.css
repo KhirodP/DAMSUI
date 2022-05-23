@@ -1,0 +1,151 @@
+.container {
+  width: 100%;
+  position: relative;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+::ng-deep .title {
+  text-align: center;
+  justify-content: center;
+  height: auto;
+  position: relative;
+  float: left;
+  width: 100%;
+  margin: 0;
+  
+}
+
+.nav-pane {
+  background: #d93954;
+    scroll-behavior: auto;
+}
+
+.user {
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  font-size: larger;
+}
+
+a{
+    text-decoration:none;
+    color: white;
+    cursor: pointer;
+}
+
+i{
+    color: white;
+}
+
+a:hover , i:hover
+{
+    color: brown;
+}
+
+
+
+ul {
+  list-style: none;
+}
+
+.listItem {
+  padding: 10px;
+  color: white;
+  font-size: larger;
+}
+
+.leftpanel {
+    height: auto;
+    position: static;
+    float: left;
+    width: 100%;
+    display: flex;
+
+}
+
+.item{
+    padding: 0.5rem;
+    font-size: large;
+    color: rgb(10, 6, 3);
+    cursor: pointer;
+    font-family: Georgia;
+
+}
+
+.item:hover{
+    background-color: #dedede;
+    color: brown;
+}
+
+
+@media screen and (max-width: 490px) {
+    .title {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .title1 {
+        width: 5px;
+    }
+}
+
+
+img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+::ng-deep .toolbar{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0%;
+    padding: 0%;
+    height: 5rem;
+    color: black;
+    background-color:#eb8c00;
+    
+}
+
+span{
+    margin: 0%;
+    padding: 0%;
+    margin-right: 10px;
+    color: white;
+}
+
+.title1{
+    font-family:"Georgia";
+    color: white;
+}
+
+.pages{
+    position: relative;
+        float: left;
+        height: 90vh;
+        flex: 1;
+        overflow-x: hidden;
+        padding: 10px;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+
+
+.menuButton{
+    text-decoration: none;
+    width: 100%;
+    background-color: #eb8c00;
+    border: 0mm;
+    color: black;
+}

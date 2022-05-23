@@ -1,0 +1,757 @@
+{
+  "documents": [
+    {
+      "id": 1,
+      "title": "Proposal for CIT Project",
+      "authorBy": "Anudit",
+      "type": "Accounting Manual",
+      "description": "The objective of this document is to detail the business requirements relevant to the CIT Platform which will be developed to perform Taxation. The CIT Platform will serve as a delivery engine to provide managed Taxation and analytics services such as :1)Client Master 2)Document Management 3)Recouncilation 4)Report Generator"
+    },
+    {
+      "id": 2,
+      "title": "Proposal for Audit Project",
+      "authorBy": "Akshay",
+      "type": "Policy guidelines",
+      "description": "The objective of this document is to detail the business requirements relevant to the RAS Audit Management Tool (RAS-AMT) which will be developed to perform Internal Audits. The RAS-AMT will serve as a delivery engine to provide managed internal audit and analytics services such as: 1) Risk Assesment 2) Audit Planning  3)Audit Execution"
+    },
+    {
+      "id": 3,
+      "title": "Proposal for Deals Project",
+      "authorBy": "Shivraj",
+      "type": "Resource Manual",
+      "description": "The objective of this document is to detail the business requirements relevant to the PwC Digital Accounting Manuals Platform (PwC DAMs) which will be developed to save, upload and make available to the users accounting manuals. The Digital Accounting Manual platform will serve as a delivery engine to provide managed accounting rules and documents services such as: 1) Centralized accounting standards view 2) User friendly interface for browsing and exporting accounting standards 3)Organizing and indexing content as per the user’s requirements"
+    }
+  ],
+  "versions": [
+    {
+      "document": "Proposal for CIT Project",
+      "versions": [
+        {
+          "version": "V1.0",
+          "status": true
+        },
+        {
+          "version": "V1.1",
+          "status": true
+        },
+        {
+          "version": "V1.2",
+          "status": true
+        }
+      ]
+    },
+    {
+      "document": "Proposal for Audit Project",
+      "versions": [
+        {
+          "version": "V2.0",
+          "status": true
+        },
+        {
+          "version": "V2.1",
+          "status": false
+        },
+        {
+          "version": "V2.2",
+          "status": true
+        }
+      ]
+    },
+    {
+      "document": "Proposal for Deals Project",
+      "versions": [
+        {
+          "version": "V3.0",
+          "status": true
+        },
+        {
+          "version": "V3.1",
+          "status": true
+        },
+        {
+          "version": "V3.2",
+          "status": true
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "version": "V1.0",
+      "sections": [
+        {
+          "section": "Client Master",
+          "description": "This section allow's to make CRUD operation on client Data"
+        },
+        {
+          "section": "Document Processing",
+          "description": "In this section we can upload and download documents"
+        },
+        {
+          "section": "Project Management",
+          "description": "This section allows to make new project and also allows to make changes in it"
+        }
+      ]
+    },
+    {
+      "version": "V1.1",
+      "sections": [
+        {
+          "section": "Reporting Service",
+          "description": "This section allows to download result in report format"
+        },
+        {
+          "section": "Reconciliation",
+          "description": "This section allows recounsilation by observing all three documents RPT,SR and ITR6"
+        }
+      ]
+    },
+    {
+      "version": "V1.2",
+      "sections": [
+        {
+          "section": "Reusable Component",
+          "description": "This section explains how we can create components that we can use again"
+        },
+        {
+          "section": "Reconciliation",
+          "description": "This section allows recounsilation by observing all three documents RPT,SR and ITR6"
+        },
+        {
+          "section": "Project Management",
+          "description": "This section allows to make new project and also allows to make changes in it"
+        }
+      ]
+    },
+    {
+      "version": "V2.0",
+      "sections": [
+        {
+          "section": "Workspace",
+          "description": "This section allows to make workspaces to manage all data"
+        },
+        {
+          "section": "Dashboard",
+          "description": "This helps to create multiple dashboards for each role, on the dashboard we are going to display data related to that role"
+        },
+        {
+          "section": "Precision System Integration",
+          "description": "This is system of PWC that we are goin to use for single sign on"
+        },
+        {
+          "section": "Client Master",
+          "description": "In this section we are going to see that how we are managing the client master data"
+        },
+        {
+          "section": "Reporting",
+          "description": "This section allows to download result in report format"
+        }
+      ]
+    },
+    {
+      "version": "V2.1",
+      "sections": [
+        {
+          "section": "Client Active Directory Integration"
+        },
+        {
+          "section": "Follow-up"
+        },
+        {
+          "section": "Reporting",
+          "description": "This section allows to download result in report format"
+        }
+      ]
+    },
+    {
+      "version": "V2.2",
+      "sections": [
+        {
+          "section": "Audit Planning"
+        },
+        {
+          "section": "RACM",
+          "description": "This will hepls to identify Risk and controls"
+        },
+        {
+          "section": "Audit Execution"
+        },
+        {
+          "section": "Reporting",
+          "description": "This section allows to download result in report format"
+        }
+      ]
+    },
+    {
+      "version": "V3.0",
+      "sections": [
+        {
+          "section": "Authentication",
+          "description": "Purpose of this is to make all the API's authenticated according to roles"
+        },
+        {
+          "section": "Dashboards",
+          "description": "This helps to create multiple dashboards for each role, on the dashboard we are going to display data related to that role"
+        },
+        {
+          "section": "Product Master"
+        },
+        {
+          "section": "Client Master"
+        }
+      ]
+    },
+    {
+      "version": "V3.1",
+      "sections": [
+        {
+          "section": "Dashboard",
+          "description": "This helps to create multiple dashboards for each role, on the dashboard we are going to display data related to that role"
+        },
+        {
+          "section": "Authentication"
+        }
+      ]
+    },
+    {
+      "version": "V3.2",
+      "sections": [
+        {
+          "section": "Dashboard",
+          "description": "This helps to create multiple dashboards for each role, on the dashboard we are going to display data related to that role"
+        },
+        {
+          "section": "Deals",
+          "description": "This is a investor relation platform to make a investment"
+        }
+      ]
+    }
+  ],
+  "keywords": [
+    {
+      "id": 1,
+      "section": "Audit Execution",
+      "description": "In this section we are going to do actual Audit",
+      "keyword": "login",
+      "frequency": "4",
+      "bookmark": true
+    },
+    {
+      "id": 2,
+      "section": "Audit Execution",
+      "description": "In this section we are going to do actual Audit",
+      "keyword": "dashboard",
+      "frequency": "3"
+    },
+    {
+      "id": 3,
+      "section": "Audit Execution",
+      "description": "In this section we are going to do actual Audit",
+      "keyword": "PM",
+      "frequency": "5"
+    },
+    {
+      "id": 4,
+      "section": "Audit Execution",
+      "description": "In this section we are going to do actual Audit",
+      "keyword": "assigned Projects",
+      "frequency": "2"
+    },
+    {
+      "id": 5,
+      "section": "Audit Execution",
+      "description": "In this section we are going to do actual Audit",
+      "keyword": "risk",
+      "frequency": "7"
+    },
+    {
+      "id": 6,
+      "section": "Audit Execution",
+      "description": "In this section we are going to do actual Audit",
+      "keyword": "control",
+      "frequency": "6"
+    },
+    {
+      "id": 7,
+      "section": "Audit Planning",
+      "description": "In this section we are going to make a plan for each and every audit with start and end date",
+      "keyword": "PM",
+      "frequency": "3",
+      "bookmark": false
+    },
+    {
+      "id": 8,
+      "section": "Audit Planning",
+      "description": "In this section we are going to make a plan for each and every audit with start and end date",
+      "keyword": "Partner",
+      "frequency": "1"
+    },
+    {
+      "id": 9,
+      "section": "Audit Planning",
+      "description": "In this section we are going to make a plan for each and every audit with start and end date",
+      "keyword": "entity",
+      "frequency": "5"
+    },
+    {
+      "id": 10,
+      "section": "Audit Planning",
+      "description": "In this section we are going to make a plan for each and every audit with start and end date",
+      "keyword": "location",
+      "frequency": "4"
+    },
+    {
+      "id": 11,
+      "section": "Audit Planning",
+      "description": "In this section we are going to make a plan for each and every audit with start and end date",
+      "keyword": "department",
+      "frequency": "6"
+    },
+    {
+      "id": 12,
+      "section": "Audit Planning",
+      "description": "In this section we are going to make a plan for each and every audit with start and end date",
+      "keyword": "processes",
+      "frequency": "2"
+    },
+    {
+      "id": 13,
+      "section": "Authentication",
+      "description": "Purpose of this is to make all the API's authenticated according to roles",
+      "keyword": "login",
+      "frequency": "1",
+      "bookmark": false
+    },
+    {
+      "id": 14,
+      "section": "Authentication",
+      "description": "Purpose of this is to make all the API's authenticated according to roles",
+      "keyword": "analyst admin",
+      "frequency": "3"
+    },
+    {
+      "id": 15,
+      "section": "Authentication",
+      "description": "Purpose of this is to make all the API's authenticated according to roles",
+      "keyword": "master admin",
+      "frequency": "6"
+    },
+    {
+      "id": 16,
+      "section": "Authentication",
+      "description": "Purpose of this is to make all the API's authenticated according to roles",
+      "keyword": "clients",
+      "frequency": "4"
+    },
+    {
+      "id": 17,
+      "section": "Client Active Directory Integration",
+      "description": "This tool shall be integrated with an active directory and will also have SSO enabled",
+      "keyword": "login",
+      "frequency": "2",
+      "bookmark": true
+    },
+    {
+      "id": 18,
+      "section": "Client Active Directory Integration",
+      "description": "This tool shall be integrated with an active directory and will also have SSO enabled",
+      "keyword": "client",
+      "frequency": "1"
+    },
+    {
+      "id": 19,
+      "section": "Client Active Directory Integration",
+      "description": "This tool shall be integrated with an active directory and will also have SSO enabled",
+      "keyword": "integration",
+      "frequency": "3"
+    },
+    {
+      "id": 20,
+      "section": "Client Active Directory Integration",
+      "description": "This tool shall be integrated with an active directory and will also have SSO enabled",
+      "keyword": "project code",
+      "frequency": "2"
+    },
+    {
+      "id": 21,
+      "section": "Client Active Directory Integration",
+      "description": "This tool shall be integrated with an active directory and will also have SSO enabled",
+      "keyword": "task code",
+      "frequency": "1"
+    },
+    {
+      "id": 24,
+      "section": "Client Master",
+      "description": "In this section we are going to see that how we are managing the client master data",
+      "keyword": "client basic",
+      "frequency": "2",
+      "bookmark": false
+    },
+    {
+      "id": 25,
+      "section": "Client Master",
+      "description": "In this section we are going to see that how we are managing the client master data",
+      "keyword": "letter of engagement",
+      "frequency": "5"
+    },
+    {
+      "id": 26,
+      "section": "Client Master",
+      "description": "In this section we are going to see that how we are managing the client master data",
+      "keyword": "auditor domain",
+      "frequency": "4"
+    },
+    {
+      "id": 27,
+      "section": "Client Master",
+      "description": "In this section we are going to see that how we are managing the client master data",
+      "keyword": "orgaization structure",
+      "frequency": "6"
+    },
+    {
+      "id": 28,
+      "section": "Follow-up",
+      "description": "This section allows auditee to agree/disagree with the auditor comments and raise conflict to the auditor’s conclusion. It will allow escalations to get triggered and customized as per client setup definition.",
+      "keyword": "IAhead",
+      "frequency": "3",
+      "bookmark": true
+    },
+    {
+      "id": 29,
+      "section": "Follow-up",
+      "description": "This section allows auditee to agree/disagree with the auditor comments and raise conflict to the auditor’s conclusion. It will allow escalations to get triggered and customized as per client setup definition.",
+      "keyword": "project manager",
+      "frequency": "4"
+    },
+    {
+      "id": 30,
+      "section": "Follow-up",
+      "description": "This section allows auditee to agree/disagree with the auditor comments and raise conflict to the auditor’s conclusion. It will allow escalations to get triggered and customized as per client setup definition.",
+      "keyword": "audit executive",
+      "frequency": "1"
+    },
+    {
+      "id": 31,
+      "section": "Follow-up",
+      "description": "This section allows auditee to agree/disagree with the auditor comments and raise conflict to the auditor’s conclusion. It will allow escalations to get triggered and customized as per client setup definition.",
+      "keyword": "issue triggered",
+      "frequency": "2"
+    },
+    {
+      "id": 32,
+      "section": "Follow-up",
+      "description": "This section allows auditee to agree/disagree with the auditor comments and raise conflict to the auditor’s conclusion. It will allow escalations to get triggered and customized as per client setup definition.",
+      "keyword": "issue closed",
+      "frequency": "6"
+    },
+    {
+      "id": 33,
+      "section": "Follow-up",
+      "description": "This section allows auditee to agree/disagree with the auditor comments and raise conflict to the auditor’s conclusion. It will allow escalations to get triggered and customized as per client setup definition.",
+      "keyword": "issue tracked",
+      "frequency": "7"
+    },
+    {
+      "id": 34,
+      "section": "Product Master",
+      "description": "In this section we are going to manage all product data and will perform CRUD operation on it",
+      "keyword": "admin",
+      "frequency": "2",
+      "bookmark": true
+    },
+    {
+      "id": 35,
+      "section": "Product Master",
+      "description": "In this section we are going to manage all product data and will perform CRUD operation on it",
+      "keyword": "individual product",
+      "frequency": "1"
+    },
+    {
+      "id": 36,
+      "section": "Product Master",
+      "description": "In this section we are going to manage all product data and will perform CRUD operation on it",
+      "keyword": "upload",
+      "frequency": "5"
+    },
+    {
+      "id": 37,
+      "section": "Product Master",
+      "description": "In this section we are going to manage all product data and will perform CRUD operation on it",
+      "keyword": "verify",
+      "frequency": "1"
+    },
+    {
+      "id": 38,
+      "section": "Product Master",
+      "description": "In this section we are going to manage all product data and will perform CRUD operation on it",
+      "keyword": "publish",
+      "frequency": "4"
+    },
+    {
+      "id": 39,
+      "section": "Product Master",
+      "description": "In this section we are going to manage all product data and will perform CRUD operation on it",
+      "keyword": "report",
+      "frequency": "2"
+    },
+    {
+      "keyword": "principle",
+      "frequency": "5",
+      "section": "Client Active Directory Integration",
+      "id": 40
+    }
+  ],
+  "entities": [
+    {
+      "id": 1,
+      "section": "Audit Execution",
+      "entity": "auditor",
+      "type": "Person"
+    },
+    {
+      "id": 2,
+      "section": "Audit Execution",
+      "entity": "PM",
+      "type": "Person"
+    },
+    {
+      "id": 3,
+      "section": "Audit Execution",
+      "entity": "USA",
+      "type": "Country"
+    },
+    {
+      "id": 4,
+      "section": "Audit Execution",
+      "entity": "Risk",
+      "type": "issue"
+    },
+    {
+      "id": 5,
+      "section": "Audit Execution",
+      "entity": "data request",
+      "type": "section"
+    },
+    {
+      "id": 6,
+      "section": "Audit Execution",
+      "entity": "bulk upload",
+      "type": "functionality"
+    },
+    {
+      "id": 7,
+      "section": "Audit Planning",
+      "entity": "auditor",
+      "type": "Person"
+    },
+    {
+      "id": 8,
+      "section": "Audit Planning",
+      "entity": "PM",
+      "type": "Person"
+    },
+    {
+      "id": 9,
+      "section": "Audit Planning",
+      "entity": "USA",
+      "type": "Country"
+    },
+    {
+      "id": 10,
+      "section": "Audit Planning",
+      "entity": "Risk",
+      "type": "issue"
+    },
+    {
+      "id": 11,
+      "section": "Audit Planning",
+      "entity": "data request",
+      "type": "section"
+    },
+    {
+      "id": 12,
+      "section": "Audit Planning",
+      "entity": "bulk upload",
+      "type": "functionality"
+    },
+    {
+      "id": 13,
+      "section": "Authentication",
+      "entity": "auditor",
+      "type": "Person"
+    },
+    {
+      "id": 14,
+      "section": "Authentication",
+      "entity": "PM",
+      "type": "Person"
+    },
+    {
+      "id": 15,
+      "section": "Authentication",
+      "entity": "USA",
+      "type": "Country"
+    },
+    {
+      "id": 16,
+      "section": "Authentication",
+      "entity": "Risk",
+      "type": "issue"
+    },
+    {
+      "id": 17,
+      "section": "Client Active Directory Integration",
+      "entity": "auditor",
+      "type": "Person"
+    },
+    {
+      "id": 18,
+      "section": "Client Active Directory Integration",
+      "entity": "PM",
+      "type": "Person"
+    },
+    {
+      "id": 19,
+      "section": "Client Active Directory Integration",
+      "entity": "USA",
+      "type": "Country"
+    },
+    {
+      "id": 20,
+      "section": "Client Active Directory Integration",
+      "entity": "Risk",
+      "type": "issue"
+    },
+    {
+      "id": 21,
+      "section": "Client Active Directory Integration",
+      "entity": "data request",
+      "type": "section"
+    },
+    {
+      "id": 24,
+      "section": "Client Master",
+      "entity": "USA",
+      "type": "Country"
+    },
+    {
+      "id": 25,
+      "section": "Client Master",
+      "entity": "Risk",
+      "type": "issue"
+    },
+    {
+      "id": 26,
+      "section": "Client Master",
+      "entity": "data request",
+      "type": "section"
+    },
+    {
+      "id": 28,
+      "section": "Follow-up",
+      "entity": "auditor",
+      "type": "Person"
+    },
+    {
+      "id": 29,
+      "section": "Follow-up",
+      "entity": "PM",
+      "type": "Person"
+    },
+    {
+      "id": 30,
+      "section": "Follow-up",
+      "entity": "USA",
+      "type": "Country"
+    },
+    {
+      "id": 31,
+      "section": "Follow-up",
+      "entity": "Risk",
+      "type": "issue"
+    },
+    {
+      "id": 32,
+      "section": "Follow-up",
+      "entity": "data request",
+      "type": "section"
+    },
+    {
+      "id": 33,
+      "section": "Follow-up",
+      "entity": "bulk upload",
+      "type": "functionality"
+    },
+    {
+      "id": 34,
+      "section": "Product Master",
+      "entity": "auditor",
+      "type": "Person"
+    },
+    {
+      "id": 35,
+      "section": "Product Master",
+      "entity": "PM",
+      "type": "Person"
+    },
+    {
+      "id": 36,
+      "section": "Product Master",
+      "entity": "USA",
+      "type": "Country"
+    },
+    {
+      "id": 37,
+      "section": "Product Master",
+      "entity": "Risk",
+      "type": "issue"
+    },
+    {
+      "id": 38,
+      "section": "Product Master",
+      "entity": "data request",
+      "type": "section"
+    },
+    {
+      "id": 39,
+      "section": "Product Master",
+      "entity": "bulk upload",
+      "type": "functionality"
+    }
+  ],
+  "reviewer": [
+    {
+      "name": "Akshay Shinde",
+      "id": 1,
+      "email": "akshay.shinde@anemoitechnologies.com"
+    },
+    {
+      "name": "Shivraj Godle",
+      "id": 2,
+      "email": "shivraj.godle@anemoitechnologies.com"
+    },
+    {
+      "name": "Siddesh kadus",
+      "id": 3,
+      "email": "siddesh.kadus@anemoitechnologies.com"
+    },
+    {
+      "name": "Shubham Saykar",
+      "id": 4,
+      "email": "shubham.saykar@anemoitechnologies.com"
+    },
+    {
+      "name": "Priya Tiwari",
+      "id": 5,
+      "email": "priya.tiwari@anemoitechnologies.com"
+    },
+    {
+      "name": "Upendra Kale",
+      "id": 6,
+      "email": "upendra.kale@anemoitechnologies.com"
+    }
+  ],
+  "docs": [
+    
+  ]
+}

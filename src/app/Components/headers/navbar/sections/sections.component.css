@@ -1,0 +1,52 @@
+.css-serial {
+    counter-reset: serial-number; /* Set the serial number counter to 0 */
+}
+
+.css-serial td:first-child:before {
+    counter-increment: serial-number; /* Increment the serial number counter */
+    content: counter(serial-number); /* Display the counter */
+}
+
+.section {
+    cursor: pointer;
+    color: blueviolet;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+       
+}
+
+.secDesc {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.keyword, .entity {
+    cursor: pointer;
+    color: brown;
+    font-size: medium;
+}
+
+.version {
+    margin-top: 20px;
+}
+
+.bottomCard {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+::ng-deep .toolbar1{
+    background-color: aqua;
+}
+
+.primaryButton, .inputSwitch{
+    font-family: Helvetica;
+    font-size: 16px;
+    height: 2em;
+}
+
+::ng-deep .keywordTable th{
+    height: 1px;
+}
+
